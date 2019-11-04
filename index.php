@@ -8,29 +8,17 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #D2CECE;
-      overflow: hidden;
-      justify-content: center;
-    }
 
-    .centerp {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      width: 90%;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="http://127.0.0.1:43110/1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D/uimedia/all.css?rev=<?php echo rand(); ?>">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
   <title>Zeronet Bridge</title>
 </head>
 
 <body>
+<div class="tools">
+<a class="plcaeholder" href="./tools">Tools</a>
+</div>
   <div class="centerp">
     <h2>This site is a bridge to the Zeronet network.</h2>
     <noscript>Javascript is required for this site</noscript>
@@ -51,7 +39,7 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
       if (background_color == zn_background_color) {
         $("#status").text("✅ Zeronet client detected. Redirecting...")
         $("#instruction").hide();
-        setTimeout(redirect, 100);
+        setTimeout(redirect, 100000);
       } else {
         $("#status").text("⚠ Zeronet client was NOT detected on your computer")
         $("#instruction").show();
