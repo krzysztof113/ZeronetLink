@@ -8,7 +8,6 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="http://127.0.0.1:43110/1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D/uimedia/all.css?rev=<?php echo rand(); ?>">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
@@ -16,15 +15,14 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
 </head>
 
 <body>
-<div class="tools">
-<a class="tools-link" href="./tools">Tools</a>
-</div>
+  <div class="tools">
+    <a class="tools-link" href="/tools">Tools</a>
+  </div>
   <div class="centerp">
     <h2>This site is a bridge to the Zeronet network.</h2>
     <noscript>Javascript is required for this site</noscript>
     <h4 id="status">Zeronet Bridge</h4>
     <h4 id="instruction">You can download from <br /><a class="pure-button pure-button-active" target="_blank" href="https://zeronet.io">Zeronet website - zeronet.io</a></h4>
-
     <a class="pure-button pure-button-primary" href="<?php echo $actual_link; ?>">Retry this page</a>
     <br />
     <br />
@@ -39,7 +37,7 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
       if (background_color == zn_background_color) {
         $("#status").text("✅ Zeronet client detected. Redirecting...")
         $("#instruction").hide();
-        setTimeout(redirect, 10000);
+        setTimeout(redirect, 100);
       } else {
         $("#status").text("⚠ Zeronet client was NOT detected on your computer")
         $("#instruction").show();
@@ -47,9 +45,7 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
     }
 
     function redirect() {
-
-        window.location.replace("<?php echo $zeronet_url; ?>");
-      
+      window.location.replace("<?php echo $zeronet_url; ?>");
     }
 
     if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
