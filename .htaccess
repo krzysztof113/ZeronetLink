@@ -1,5 +1,6 @@
-RewriteEngine On
+RewriteEngine On 
 RewriteRule    style.css    style.css    [NC,L]    
 RewriteRule    tools    tools.php    [NC,L]    
+RewriteRule    Tools    tools.php    [NC,L]    
 RewriteRule    $    index.php?$1    [NC,L]    
 

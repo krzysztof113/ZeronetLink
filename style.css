@@ -14,7 +14,14 @@ body {
     width: 90%;
   }
   .tools {
+    
     position: absolute;
     left: 10px;
-    top: 10px;
+    bottom: 10px;
+  }
+  .tools-link {
+    text-decoration: none;
+  }
+  .url-input {
+    min-width: 90%;
   }
