@@ -35,11 +35,11 @@ $zeronet_url = "http://127.0.0.1:43110" . $_SERVER[REQUEST_URI];
       var background_color = $("body").css("background-color")
       var zn_background_color = "rgb(210, 206, 205)" //HelloZN css
       if (background_color == zn_background_color) {
-        $("#status").text("✅ Zeronet client detected. Redirecting...")
+        $("#status").html("✅ Zeronet client detected. Redirecting to <br /><br /><a class='tools-link' href='<?php echo $zeronet_url; ?>'><?php echo $zeronet_url; ?></a>")
         $("#instruction").hide();
         setTimeout(redirect, 100);
       } else {
-        $("#status").text("⚠ Zeronet client was NOT detected on your computer")
+        $("#status").html("⚠ Zeronet client was NOT detected on your computer ⚠<br /><br /><a class='tools-link' href='<?php echo $zeronet_url; ?>'><?php echo $zeronet_url; ?></a>")
         $("#instruction").show();
       }
     }
